@@ -4,12 +4,13 @@ from bs4 import BeautifulSoup
 from typing import Tuple
 import csv
 
+
 BASE_URL = "https://ru.wikipedia.org/w/index.php"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; Bot/1.0; +https://example.com/bot)"
 }
 
-RUSSIAN_ALPHABET = list("АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ")
+RUSSIAN_ALPHABET = list("АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯ")
 
 
 async def fetch(session: aiohttp.ClientSession, params: dict) -> str:
